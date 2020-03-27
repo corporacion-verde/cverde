@@ -5,6 +5,9 @@ services:
     image: postgres:latest
     expose:
       - "5432"
+    environment: 
+      - POSTGRES_DB=develop
+      - POSTGRES_USER=postgres
     volumes: 
       - 'postgres-data:/var/lib/postgresql/data'
   
