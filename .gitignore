@@ -25,7 +25,7 @@ frontend/yarn-error.log*
 # Backend files
 
 backend/secrets.json
-# backend/api/__pycache__
+backend/api/__pycache__
 
 # Postgres volume
 postgres-data/
