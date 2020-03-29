@@ -12,6 +12,15 @@ services:
     volumes:
       - 'postgres-data:/var/lib/postgresql/data'
 
+  migration:
+    build: ./backend
+    command: python manage.py makemigrations --noinput
+    command: python manage.py migrate --noinput
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - database
+
   backend:
     container_name: backend
     build: ./backend
