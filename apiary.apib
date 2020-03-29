@@ -1,80 +1,297 @@
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
 
-# cverde
+# Cverde backend
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Cverde backend is a simple API allowing a React client to access relevant info to display on the Cverde website
 
-## Questions Collection [/questions]
+## General Contents [/general_contents]
 
-### List All Questions [GET]
+### Get Content by Code [GET /general_contents/{content_code}/]
+
++ Parameters
+    
+    + content_code - code of the general content we want to get
+    
++ Response 200
+
+        {
+            "id": 1,
+            "title": "Contenido General 1",
+            "content": "Este es el contenido del primer contenido general",
+            "title_english": "General Content 1",
+            "content_english": "This is the content for the first general content",
+            "image": "/media/images/1"
+        }
+        
+## Team Members [/team_members]
+This model will be deleted when cverde users are implemented
+
+### List All Team Members [GET /team_members]
+
++ Response 200
+
+        [
+          {
+            "id": 1,
+            "name": "Seba",
+            "lastname": "Velozo",
+            "email": "savelozo@uc.cl",
+            "role": "Presidente",
+            "role_english": "President",
+            "avatar": "/media/images/1",
+            "position": 1
+          },
+          {
+            "id": 2,
+            "name": "Jorge",
+            "lastname": "Becerra",
+            "email": "jabecerra@uc.cl",
+            "role": "Secretario",
+            "role_english": "Secretary",
+            "avatar": "/media/images/1",
+            "position": 2
+          },
+          {
+            "id": 3,
+            "name": "Carlos",
+            "lastname": "Salame",
+            "email": "cjsalame@uc.cl",
+            "role": "Tesorero",
+            "role_english": "Treasurer",
+            "avatar": "/media/images/1",
+            "position": 3
+          }
+        ]
+
+## Projects [/projects]
+
+### Get project [GET /projects/{project_id}/]
+
++ Parameters
+
+    + project_id - identifier of the project we want to get
+    
++ Response 200
+
+        {
+            "id": 1,
+            "title": "Proyecto 1",
+            "description": "Esta es la descripcion del primer proyecto",
+            "title_english": "Project 1",
+            "content_english": "This is the description for the first project",
+            "image": "/media/images/1",
+            "images": [
+                "/media/images/2",
+                "/media/images/3",
+                "/media/images/4",
+            ]
+        }
+
+### List All Projects [GET /projects]
+
++ Response 200
+
+        [
+            {
+                "id": 1,
+                "title": "Proyecto 1",
+                "description": "Esta es la descripcion del primer proyecto",
+                "title_english": "Project 1",
+                "content_english": "This is the description for the first project",
+                "image": "/media/images/1",
+                "images": [
+                    "/media/images/2",
+                    "/media/images/3",
+                    "/media/images/4",
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Proyecto 2",
+                "description": "Esta es la descripcion del segundo proyecto",
+                "title_english": "Project 1",
+                "content_english": "This is the description for the second project",
+                "image": "/media/images/1",
+                "images": [
+                    "/media/images/2",
+                    "/media/images/3",
+                    "/media/images/4",
+                ]
+            }
+        ]
+        
+## Authentication [/login]
+
+### Login [POST /login/]
+
++ Request (application/json)
+
+        {
+            
+                "email": "pedro@uc.cl",
+                "password":"123123123"
+        
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "token": "token123",
+            "user": {
+                "_id": "5bf1982605fd978e960034ad6509",
+                "username": "pedro",
+                "email": "pedro@uc.cl",
+                "id": 41,
+                "__v": 0
+            }
+        }
+
++ Request (application/json)
+
+        {
+            "email": "admin@uc.cl",
+            "password": "wrong_password"
+        }
+        
++ Response 404 (application/json)
+
+        {
+            "type": "error",
+            "message": "Failed to Login, please try again"
+        }
+
+
+## Users [/users]
+        
+### Register user [POST /users/]
+
++ Request (application/json)
+
+        {
+            "username":"apiary",
+            "email":"user@apiary.com",
+            "password":"123123123"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "_id": "5bf605fd978e960034ad6509",
+            "username": "username",
+            "email": "username@uc.cl",
+            "id": 41,
+            "__v": 0
+        }
+        
+### Update user [PATCH /users/:id]
+
++ Request (application/json)
+    + Headers
+    
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTQ2MjAzNTQ1fQ.gbJzF574FNRbHlcUnMrwxNxcckH2VsfJGhryMnejmGk
+    + Body
+    
+            {
+                "email": "new_email@arquitran.cl"
+            }
+        
++ Response 200 (application/json)
+
+        {
+            "_id": "5bf605fd978e960034ad6509",
+            "username": "username",
+            "email": "new_email@arquitran.cl",
+            "id": 41,
+            "__v": 0
+        }
+
+### Get user by id [GET /users/{user_id}/]
+
++ Parameters
+    + user_id
+
++ Request (application/json)
+    + Headers
+
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTQ2MjAzNTQ1fQ.gbJzF574FNRbHlcUnMrwxNxcckH2VsfJGhryMnejmGk
+        
++ Response 200 (application/json)
+
+        {
+            "fcmTokens": [],
+            "_id": "5bf60824dbba41002a17d024",
+            "username": "username",
+            "email": "username@uc.cl",
+            "id": 1,
+            "__v": 0
+        }
+        
+        
++ Response 404 (application/json)
+
+        {
+            "error": "not found" 
+        }
+        
+
+### Get current user [GET /user/]
+
+
++ Request (application/json)
+    + Headers
+
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTQ2MjAzNTQ1fQ.gbJzF574FNRbHlcUnMrwxNxcckH2VsfJGhryMnejmGk
+        
++ Response 200 (application/json)
+
+        {
+            "fcmTokens": [],
+            "_id": "5bf60824dbba41002a17d024",
+            "username": "username",
+            "email": "username@uc.cl",
+            "id": 1,
+            "__v": 0
+        }
+        
+        
+        
+        
+### List all users [GET /users/]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTQ2MjAzNTQ1fQ.gbJzF574FNRbHlcUnMrwxNxcckH2VsfJGhryMnejmGk
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "fcmTokens": [],
+                "_id": "5bf60824dbba41002a17d024",
+                "username": "username",
+                "email": "username@uc.cl",
+                "id": 1,
+                "__v": 0
+            },
+            {
+                "fcmTokens": [],
+                "_id": "5bf60824dbba41002a17d084",
+                "username": "username2",
+                "email": "username2@uc.cl",
+                "id": 2,
+                "__v": 0
             }
         ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+        
+### Deactivate account [DELETE /users/:id/]
 
 + Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
     + Headers
 
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTQ2MjAzNTQ1fQ.gbJzF574FNRbHlcUnMrwxNxcckH2VsfJGhryMnejmGk
+        
+        
++ Response 204
