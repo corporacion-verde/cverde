@@ -40,7 +40,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 DEBUG = True
 
 # This can be used to toggle between your local testing db (db.sqlite3) and the PostgreSQL backend:
-# DOCKER = True 
+# DOCKER = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -51,6 +51,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'projects.apps.ProjectsConfig', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
