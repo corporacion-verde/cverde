@@ -12,15 +12,6 @@ services:
     volumes:
       - 'postgres-data:/var/lib/postgresql/data'
 
-  migration:
-    build: ./backend
-    command: python3 manage.py makemigrations
-    command: python3 manage.py migrate --noinput
-    volumes:
-      - ./backend:/app/backend
-    depends_on:
-      - database
-
   backend:
     container_name: backend
     build: ./backend
@@ -30,7 +21,12 @@ services:
       - "8000:8000"
     stdin_open: true
     tty: true
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: bash -c "
+        python3 manage.py makemigrations &&
+        python3 manage.py migrate --noinput &&
+        python3 manage.py runserver 0.0.0.0:8000
+      "
+
     depends_on:
       - database
 
