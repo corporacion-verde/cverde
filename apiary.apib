@@ -1,11 +1,58 @@
 FORMAT: 1A
-HOST: https://polls.apiblueprint.org/
+HOST: http://localhost:8000/
 
 # Cverde backend
 
 Cverde backend is a simple API allowing a React client to access relevant info to display on the Cverde website
 
-## General Contents [/general_contents]
+## General Contents [/generalcontents]
+
+### List All Contents [GET /generalcontents/contents/]
+
++ Response 200
+
+        [
+            {
+                "title": "Historia",
+                "content": "Cverde nace como grupo hacia fines del año 2014, producto del equipo que se venía repitiendo en la comisión de sustentabilidad del CAI (Centro de Alumnos de Ingeniería UC) el último tiempo. Se buscaba dar continuidad a este grupo que se venía encontrando indiferente de los centros de alumnos electos; las caras eran las mismas y el trabajo era compartido con un objetivo común. Nace entonces la inquietud de crear un espacio donde se pudiera trabajar en pos de la sustentabilidad de manera transversal, aprovechando el equipo que existía y sin depender de otra institución para tomar decisiones y ser capaces de aplicarlas. De esta manera, también se nos abrían las puertas a trabajar como organización independiente, pudiendo colaborar con otras organizaciones, empresas y personas.\r\nA comienzos del año 2015 es que surge el nombre de Cverde, que permite un juego de palabras interesante a la vez que representaba lo que somos; “Corporación Verde”. Es en este año entonces donde definimos nuestra primera directiva y comenzamos a sacar nuestros primeros proyectos personales como organización, pero siempre muy ligados a la UC y a la escuela de Ingeniería.\r\nEl año 2016 estrenamos nueva directiva, y fue un año de muchos crecimientos; nos afianzamos como grupo, mejoramos en términos organizacionales y alcanzamos una madurez importante. Armamos lazos con voluntariados sociales a través de nuestro proyecto de gestión de residuos, Kit Verde. Comenzamos proyectos con entidades más grandes de la universidad y nos pusimos a trabajar en ámbitos más serios, logrando siempre ir en pro del medioambiente.\r\nPasamos al año 2017, donde nos propusimos salir de la escena donde estábamos y ampliarnos a toda la universidad y dedicarnos a trabajar fuera de esta, ya acercándonos a los objetivos de trabajar por todo el país. Formamos parte de importantes alianzas con otras organizaciones con un alcance y un trabajo de muchos años, y sacamos adelante nuestra primera versión del voluntariado universitario medioambiental Operaciones Cverde, lo que nos hizo crecer mucho y llegar a lugares donde antes no habíamos llegado.\r\nHoy, nos encontramos comenzando un nuevo año más firmes que nunca, creciendo como siempre y haciendo las cosas cada vez mejor y más ambiciosamente.\r\nDesde nuestros inicios hasta el presente, nos hemos consolidado como un grupo de agentes de cambio que genera impacto y que se desarrolla y crece con la intención de llevar la sustentabilidad a ser un eje transversal de la sociedad y el mundo. Únetenos!",
+                "title_english": "History",
+                "content_english": "Cverde started as a group towards the end of 2014, product of the team that had been repeated in the sustainability commission of the Engineering Students Center of the Catholic University of Chile the last years. It was sought to give continuity to this group that had been found indifferent to the elected students centers; the faces were the same and the work was shared with a common goal. The concern is then born to create a space where anyone could work towards sustainability in a transversal way, taking advantage of the team that already existed and without relying on another institution to make decisions and be able to apply them. In this way, we also opened the doors to work as an independent organization, being able to collaborate with other organizations, companies and individuals.\r\nAt the beginning of 2015 it was that the name of Cverde emerges, which allows an interesting play on words while representing who we are; “Corporación Verde” (Green Corporation in English). It was in that year that we define our first board and begin to take out our first personal projects as an organization, but always closely linked to the Catholic University of Chile and its School of Engineering.\r\nIn 2016 we released a new board, and it was a year of many growths; We consolidate as a group, improve in organizational terms and reach an important maturity. We build ties with social volunteers through our waste management project, Kit Verde. We started projects with larger entities of the university and we began to work in more serious areas, always working for the benefit of the environment.\r\nWe move on to the year 2017, where we set out to leave the scene where we were and expand to the entire university and dedicate ourselves to work outside of it, already approaching the objectives of working throughout the country. We are part of important alliances with other organizations with a scope and work of many years, and we carried out our first version of the environmental university volunteer Operaciones Cverde, which made us grow a lot and reach places where we had not arrived before.\r\nToday, we are starting a new year stronger than ever, growing as always and doing things better and more ambitiously.\r\nFrom our beginnings to the present, we have established ourselves as a group of agents of change that generates impact and that develops and grows with the intention of bringing sustainability to be a transversal axis of society and the world. Join us!",
+                "code": "history",
+                "image": "http://localhost:8000/media/images/contents/2012_07_sustain.jpg"
+            },
+            {
+                "title": "Misión",
+                "content": "Con el fin de materializar nuestra visión queremos profesionalizar transversalmente la sustentabilidad por medio de proyectos de intervención directa y, a través de esto, lograr que nuevos líderes encuentren los espacios y herramientas necesarias para impactar en Chile y el mundo.",
+                "title_english": "Mission",
+                "content_english": "In order to materialize our vision we want to professionalize sustainability in a transversal way through direct intervention projects and, through this, ensure that new leaders can find the necessary spaces and tools to make an impact on Chile and the world.",
+                "code": "mission",
+                "image": "http://localhost:8000/media/images/contents/Cverde_Transparente_iMMCFAq.png"
+            },
+            {
+                "title": "Misión y Visión",
+                "content": "Con la visión de regenerar la relación de la sociedad con el medioambiente. Nuestra misión es impulsar iniciativas que nos acerquen a un mundo sustentable.",
+                "title_english": "Mission and vision",
+                "content_english": "With the vision of restore the relationship of society with the environment. Our mission is to promote initiatives that bring us closer to a sustainable world.",
+                "code": "mission_vision",
+                "image": "http://localhost:8000/media/images/contents/Cverde_Transparente.png"
+            },
+            {
+                "title": "Quienes somos",
+                "content": "Cverde es una organización cuyo foco es promover y practicar la sustentabilidad; entendida como un desarrollo humano integral en equidad y constante equilibrio con el medio natural.\r\nAl ser una plataforma de proyectos, concretamos nuestros objetivos por medio de estos, aplicándolos en distintas esferas o estamentos de la sociedad.",
+                "title_english": "About us",
+                "content_english": "Cverde is an organization whose focus is to promote and practice sustainability; understood as integral human development in equity and constant balance with the natural environment.\r\nBeing a platform of projects, we specify our objectives through these, applying them in different spheres or levels of society.",
+                "code": "about_us",
+                "image": "http://localhost:8000/media/images/contents/sustainability-icons.jpg"
+            },
+            {
+                "title": "Visión",
+                "content": "Ser un actor clave en la consolidación de una relación sustentable entre los sistemas naturales bajo la concepción de la humanidad como parte de estos",
+                "title_english": "Vision",
+                "content_english": "Being a key player in the consolidation of a sustainable relationship between natural systems under the conception of humanity as part of these",
+                "code": "vision",
+                "image": "http://localhost:8000/media/images/contents/Cverde_Transparente_LQBKdVG.png"
+            }
+        ]
 
 ### Get Content by Code [GET /general_contents/{content_code}/]
 
@@ -16,55 +63,161 @@ Cverde backend is a simple API allowing a React client to access relevant info t
 + Response 200
 
         {
-            "id": 1,
-            "title": "Contenido General 1",
-            "content": "Este es el contenido del primer contenido general",
-            "title_english": "General Content 1",
-            "content_english": "This is the content for the first general content",
-            "image": "/media/images/1"
+            "title": "Historia",
+            "content": "Cverde nace como grupo hacia fines del año 2014, producto del equipo que se venía repitiendo en la comisión de sustentabilidad del CAI (Centro de Alumnos de Ingeniería UC) el último tiempo. Se buscaba dar continuidad a este grupo que se venía encontrando indiferente de los centros de alumnos electos; las caras eran las mismas y el trabajo era compartido con un objetivo común. Nace entonces la inquietud de crear un espacio donde se pudiera trabajar en pos de la sustentabilidad de manera transversal, aprovechando el equipo que existía y sin depender de otra institución para tomar decisiones y ser capaces de aplicarlas. De esta manera, también se nos abrían las puertas a trabajar como organización independiente, pudiendo colaborar con otras organizaciones, empresas y personas.\r\nA comienzos del año 2015 es que surge el nombre de Cverde, que permite un juego de palabras interesante a la vez que representaba lo que somos; “Corporación Verde”. Es en este año entonces donde definimos nuestra primera directiva y comenzamos a sacar nuestros primeros proyectos personales como organización, pero siempre muy ligados a la UC y a la escuela de Ingeniería.\r\nEl año 2016 estrenamos nueva directiva, y fue un año de muchos crecimientos; nos afianzamos como grupo, mejoramos en términos organizacionales y alcanzamos una madurez importante. Armamos lazos con voluntariados sociales a través de nuestro proyecto de gestión de residuos, Kit Verde. Comenzamos proyectos con entidades más grandes de la universidad y nos pusimos a trabajar en ámbitos más serios, logrando siempre ir en pro del medioambiente.\r\nPasamos al año 2017, donde nos propusimos salir de la escena donde estábamos y ampliarnos a toda la universidad y dedicarnos a trabajar fuera de esta, ya acercándonos a los objetivos de trabajar por todo el país. Formamos parte de importantes alianzas con otras organizaciones con un alcance y un trabajo de muchos años, y sacamos adelante nuestra primera versión del voluntariado universitario medioambiental Operaciones Cverde, lo que nos hizo crecer mucho y llegar a lugares donde antes no habíamos llegado.\r\nHoy, nos encontramos comenzando un nuevo año más firmes que nunca, creciendo como siempre y haciendo las cosas cada vez mejor y más ambiciosamente.\r\nDesde nuestros inicios hasta el presente, nos hemos consolidado como un grupo de agentes de cambio que genera impacto y que se desarrolla y crece con la intención de llevar la sustentabilidad a ser un eje transversal de la sociedad y el mundo. Únetenos!",
+            "title_english": "History",
+            "content_english": "Cverde started as a group towards the end of 2014, product of the team that had been repeated in the sustainability commission of the Engineering Students Center of the Catholic University of Chile the last years. It was sought to give continuity to this group that had been found indifferent to the elected students centers; the faces were the same and the work was shared with a common goal. The concern is then born to create a space where anyone could work towards sustainability in a transversal way, taking advantage of the team that already existed and without relying on another institution to make decisions and be able to apply them. In this way, we also opened the doors to work as an independent organization, being able to collaborate with other organizations, companies and individuals.\r\nAt the beginning of 2015 it was that the name of Cverde emerges, which allows an interesting play on words while representing who we are; “Corporación Verde” (Green Corporation in English). It was in that year that we define our first board and begin to take out our first personal projects as an organization, but always closely linked to the Catholic University of Chile and its School of Engineering.\r\nIn 2016 we released a new board, and it was a year of many growths; We consolidate as a group, improve in organizational terms and reach an important maturity. We build ties with social volunteers through our waste management project, Kit Verde. We started projects with larger entities of the university and we began to work in more serious areas, always working for the benefit of the environment.\r\nWe move on to the year 2017, where we set out to leave the scene where we were and expand to the entire university and dedicate ourselves to work outside of it, already approaching the objectives of working throughout the country. We are part of important alliances with other organizations with a scope and work of many years, and we carried out our first version of the environmental university volunteer Operaciones Cverde, which made us grow a lot and reach places where we had not arrived before.\r\nToday, we are starting a new year stronger than ever, growing as always and doing things better and more ambitiously.\r\nFrom our beginnings to the present, we have established ourselves as a group of agents of change that generates impact and that develops and grows with the intention of bringing sustainability to be a transversal axis of society and the world. Join us!",
+            "code": "history",
+            "image": "http://localhost:8000/media/images/contents/2012_07_sustain.jpg"
         }
         
 ## Team Members [/team_members]
-This model will be deleted when cverde users are implemented
+This model could be deleted when cverde users are implemented
 
-### List All Team Members [GET /team_members]
+### List All Team Members [GET /general_contents/teammembers]
 
 + Response 200
 
         [
-          {
-            "id": 1,
-            "name": "Seba",
-            "lastname": "Velozo",
-            "email": "savelozo@uc.cl",
-            "role": "Presidente",
-            "role_english": "President",
-            "avatar": "/media/images/1",
-            "position": 1
-          },
-          {
-            "id": 2,
-            "name": "Jorge",
-            "lastname": "Becerra",
-            "email": "jabecerra@uc.cl",
-            "role": "Secretario",
-            "role_english": "Secretary",
-            "avatar": "/media/images/1",
-            "position": 2
-          },
-          {
-            "id": 3,
-            "name": "Carlos",
-            "lastname": "Salame",
-            "email": "cjsalame@uc.cl",
-            "role": "Tesorero",
-            "role_english": "Treasurer",
-            "avatar": "/media/images/1",
-            "position": 3
-          }
+            {
+                "name": "Juan José",
+                "lastname": "Martin",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Presidente",
+                "role_english": "President",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4128_LPvNEqM.JPG",
+                "position": 1
+            },
+            {
+                "name": "Fernanda",
+                "lastname": "Arellano",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Vicepresidenta",
+                "role_english": "Vice President",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4138_hlvUuH7.JPG",
+                "position": 2
+            },
+            {
+                "name": "Carlos",
+                "lastname": "von Dessauer",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Vicepresidente",
+                "role_english": "Vice President",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4131_9593VT7.JPG",
+                "position": 3
+            },
+            {
+                "name": "Paulina",
+                "lastname": "Tobar",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Recursos Humanos",
+                "role_english": "Human Resources",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4118_xIFGwx6.JPG",
+                "position": 4
+            },
+            {
+                "name": "Camila",
+                "lastname": "Garcés",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Secretaria",
+                "role_english": "Secretary",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4141_PwC8koX.JPG",
+                "position": 5
+            },
+            {
+                "name": "Gerardo",
+                "lastname": "Butron",
+                "email": "corporacioncverde@gmail.com",
+                "role": "Tesorero",
+                "role_english": "Treasurer",
+                "avatar": "http://localhost:8000/media/images/team_members/IMG_4137_vdfXcWa.JPG",
+                "position": 6
+            }
         ]
 
+        
+### Get Team Member [GET /general_contents/teammembers/{member_id}/]
+
++ Parameters
+    
+    + member_id - code of the general content we want to get
+    
++ Response 200
+
+        {
+            "name": "Carlos",
+            "lastname": "von Dessauer",
+            "email": "corporacioncverde@gmail.com",
+            "role": "Vicepresidente",
+            "role_english": "Vice President",
+            "avatar": "http://localhost:8000/media/images/team_members/IMG_4131_9593VT7.JPG",
+            "position": 3
+        }
+
 ## Projects [/projects]
+
+### List All Projects [GET /projects]
+
++ Response 200
+
+        [
+            {
+                "title": "Creduce",
+                "description": "Creduce es un proyecto que se dedica a fomentar e impulsar la cultura del zero waste. Buscamos promover y visibilizar el consumo responsable, con énfasis tanto en el consumidor como en el productor, con el fin de generar cambios de conducta. Cada versión del proyecto se centra en un producto en específico.  La primera versión fue enfocada en la reducción de bolsas plásticas y la segunda versión en la reducción de vasos de polipapel.",
+                "title_english": "Creducing",
+                "description_english": "Creducing is a project that promotes 'zero waste' culture. We seek to encourage and make visible responsible consumption, with emphasis on consumers and producers to generate behavioral changes. Each version of the project focuses on a specific product. The first version was focused on the reduction of plastic bags and the second one on the reduction of poly-paper cups.",
+                "code": "c_reduce",
+                "image": "http://localhost:8000/media/images/projects/Logo_C_reduce_jpg_1-1.jpg"
+            },
+            {
+                "title": "Días sustentables",
+                "description": "Este proyecto organiza e implementa intervenciones, exposiciones y representaciones en espacios de uso público en las fechas de conmemoración o reconocimiento sobre temáticas de sustentabilidad y de la Naturaleza. Se busca abordar la sustentabilidad desde el arte, con una manera original y diferente de despertar la curiosidad y transmitir visualmente a las personas la importancia de tomar conciencia y acción. Esto eleva el protagonismo y relevancia de estos días o semanas de conmemoración. Algunos eventos donde se ha intervenido el espacio universitario son: Día de la Biodiversidad, Día del Árbol, Día Mundial sin Automóvil, Día de la Tierra, Día del Reciclaje etc.\r\nSi sientes el Arte como algo que puede impactar de forma profunda en la curiosidad y conciencia de las personas sobre temas de sustentabilidad, ¡hacemos el llamado a sumarte!",
+                "title_english": "Sustainable days",
+                "description_english": "This project plans and implements interventions, exhibitions and representations in public spaces on commemoration dates on issues of sustainability and Nature. It seeks to address sustainability from Art, with an original and different way to incite curiosity and visually communicate the importance of becoming aware and action to people in about the reasons for this commemorations. This leads to raising the prominence and relevance of these days or weeks of commemoration. Some important events that the university space has been intervened are World Environment Day, Biodiversity Day, Tree Day, Parking Day, Earth Day, etc.\r\nIf you feel Art as something that can impact deeply on people's curiosity and consciousness about sustainability issues, we call to join us!",
+                "code": "dias_sust",
+                "image": "http://localhost:8000/media/images/projects/WhatsApp_Image_2019-11-22_at_19.42.49_rgFTL9h.jpeg"
+            },
+            {
+                "title": "Kit Verde",
+                "description": "Es un servicio de reciclaje completo para eventos masivos y voluntariados de todo ámbito con el objetivo de reducir el impacto ambiental en estos, concientizar y fomentar el reciclaje. El servicio incluye una capacitación inicial sobre la identificación de los diferentes tipos de residuos para su clasificación. Se le entregan los sacos a los encargados, y luego del evento, el equipo de Kit Verde se encarga de la gestión de los residuos, entregando finalmente una medición del impacto ambiental evitado a través de estas acciones.",
+                "title_english": "Green Kit",
+                "description_english": "Green Kit is a complete recycling service for mass events and volunteering from all types to reduce the environmental impact on them, and also, raising consciousness and promoting recycling. The service includes an initial instruction on the identification and classification of the different types of waste. The bags are given to those who manage the event, and after that, the Green Kit team is responsible for waste management. Also, the volunteering receives a measurement of the environmental impact avoided through these actions.",
+                "code": "kit_verde",
+                "image": "http://localhost:8000/media/images/projects/Kit_Verde_3_XS4UuPl.jpeg"
+            },
+            {
+                "title": "Lompost",
+                "description": "Lompost es un emprendimiento que busca promover la sustentabilidad por medio del reciclaje orgánico. Queremos que las personas aprendan a cuidar el medio ambiente y adquieran hábitos para ello, con el fin de minimizar el impacto humano en el planeta. Nos dedicamos al reciclaje de residuos orgánicos, venta de lombriceras hechas con maderas reutilizadas, venta de lombrices y productos asociados. Además, tenemos un fuerte rol comunitario por medio de talleres e instalación de puntos de reciclaje orgánico que sirven para expandir el conocimiento e involucrar a más gente en este cambio de mentalidad. Más información sobre el proyecto, los productos y servicios en www.lompost.cl , https://www.facebook.com/lompostchile/ , @lompostchile",
+                "title_english": "Lompost",
+                "description_english": "Lompost is a venture that seeks to promote sustainability through organic recycling. We want people to learn to care for the environment and get habits for it to minimize the human impact on the planet.\r\nWe are dedicated to organic waste recycling, worms sales, and associated products. Besides, we conduct community workshops to expand knowledge and involve more people in this change of mindset.\r\nMore information about the project, products, and services at www.lompost.cl, https://www.facebook.com/lompostchile/, @lompostchile",
+                "code": "lompost",
+                "image": "http://localhost:8000/media/images/projects/WhatsApp_Image_2019-11-22_at_18.44.24.jpeg"
+            },
+            {
+                "title": "Operaciones Cverde",
+                "description": "Operaciones Cverde es un voluntariado de remediación ambiental en donde se realiza la restauración de un ecosistema dañado. \r\nAdemás de las labores de restauración, se realizan actividades de formación en sustentabilidad y empoderamiento para crear agentes de cambio.\r\n\r\nLa versión 2019 de las operaciones tendrá lugar en la playa Las Corvinas, lugar cercano a la desembocadura del río Rapel. \r\n\r\nLas versiones anteriores han sido: \r\n2017 - Humedal de Pichicuy \r\n2018 - Humedal el Trapiche \r\nMás información en ig: @operacionescverde",
+                "title_english": "Cverde volunteering",
+                "description_english": "There is an environmental volunteering in which is carried out the remediation of a damaged ecosystem and is organized and executed once a year. Concurrently with the commitment of cleaning the area, there is provided some education on sustainability and environmental awareness to the group of volunteers, to also be a life-changing and empowerment experience. The staff carries out many activities to learn about the environment and all the problems we face today.\r\nThe next version of operations in 2019 will be at Las Corvinas beach, near the Rapel River's mouth. The ecosystems remedied in the past versions were:\r\n2017 - Pichicuy Wetland\r\n2018 -  ElTrapiche Wetland\r\nMore information at ig: @operacionescverde",
+                "code": "operaciones",
+                "image": "http://localhost:8000/media/images/projects/2018-10-17_08.04.32_2_1.jpg"
+            },
+            {
+                "title": "Plan Educacional",
+                "description": "En este proyecto se desarrolla material educativo sobre temáticas ligadas al contexto planetario actual, a la sustentabilidad y la ecología. También nos encargamos de transmitir estos conocimientos a estudiantes de las edades más pequeñas (3-12 años aprox), a través de instancias teórico-prácticas como clases, charlas, talleres y otras actividades, quedando en evidencia la capacidad y poder individual y colectivo de generar cambios y contribuir en la búsqueda de soluciones. Nuestros pilares son la formación multidisciplinaria, concientización y el empoderamiento de la educación primaria.",
+                "title_english": "Education plan",
+                "description_english": "This project develops educational material on topics related to the current planetary context, sustainability, and ecology. Also, we take responsibility for communicating this knowledge to students of all ages. Through practical and theoretical instances such as classes, lectures, workshops, and other activities, the individual capacity and power to generate changes and contribute to the search for solutions is evidenced. Our aims are multidisciplinary training, awareness, and empowerment.",
+                "code": "plan_educacional",
+                "image": "http://localhost:8000/media/images/projects/WhatsApp_Image_2019-12-27_at_16.13.11_1_my7I3BZ.jpeg"
+            },
+            {
+                "title": "Replanteando la Alimentación",
+                "description": "En este proyecto educamos y concientizamos acerca del impacto que nuestros hábitos alimenticios tradicionales tienen sobre el medio ambiente y nuestra salud. Nuestra motivación nace de saber que pequeñas decisiones diarias tienen grandes consecuencias hoy y mañana, y que al descubrirlas podemos abordarlas y generar el cambio. En las actividades formamos sobre impacto ambiental de la alimentación, nutrición, autocuidado y prácticas culinarias, generando cambios de hábitos y conciencia por medio de conversatorios, talleres, charlas y degustaciones.\r\n\r\nSi te interesa la alimentación y su relación con nuestro entorno, no dudes en contactarnos. Si tienes ganas de continuar aprendiendo, te invitamos a participar y ser parte de lo que se viene ¡No te quedes fuera!",
+                "title_english": "Rethinking Food",
+                "description_english": "In this project, we educate and raise awareness about the impact that our traditional eating practices have on the environment and our health. Our motivation begins from understanding that small daily decisions have great consequences today and tomorrow and that by discovering them we can address it and generate changes In the activities we train on the environmental impact of food, nutrition, self-care, and culinary practices, generating changes in habits and knowledge through conversations, workshops, talks, and tastings.\r\n\r\nIf you are interested in food and its relationship with our environment, do not hesitate to contact us. If you feel like proceeding to learn, we invite you to participate and be part of what is coming. Don't be left out!",
+                "code": "replanteando",
+                "image": "http://localhost:8000/media/images/projects/replanteando_1_km86N14.png"
+            }
+        ]
 
 ### Get project [GET /projects/{project_id}/]
 
@@ -75,52 +228,14 @@ This model will be deleted when cverde users are implemented
 + Response 200
 
         {
-            "id": 1,
-            "title": "Proyecto 1",
-            "description": "Esta es la descripcion del primer proyecto",
-            "title_english": "Project 1",
-            "content_english": "This is the description for the first project",
-            "image": "/media/images/1",
-            "images": [
-                "/media/images/2",
-                "/media/images/3",
-                "/media/images/4",
-            ]
+            "title": "Kit Verde",
+            "description": "Es un servicio de reciclaje completo para eventos masivos y voluntariados de todo ámbito con el objetivo de reducir el impacto ambiental en estos, concientizar y fomentar el reciclaje. El servicio incluye una capacitación inicial sobre la identificación de los diferentes tipos de residuos para su clasificación. Se le entregan los sacos a los encargados, y luego del evento, el equipo de Kit Verde se encarga de la gestión de los residuos, entregando finalmente una medición del impacto ambiental evitado a través de estas acciones.",
+            "title_english": "Green Kit",
+            "description_english": "Green Kit is a complete recycling service for mass events and volunteering from all types to reduce the environmental impact on them, and also, raising consciousness and promoting recycling. The service includes an initial instruction on the identification and classification of the different types of waste. The bags are given to those who manage the event, and after that, the Green Kit team is responsible for waste management. Also, the volunteering receives a measurement of the environmental impact avoided through these actions.",
+            "code": "kit_verde",
+            "image": "http://localhost:8000/media/images/projects/Kit_Verde_3_XS4UuPl.jpeg"
         }
 
-### List All Projects [GET /projects]
-
-+ Response 200
-
-        [
-            {
-                "id": 1,
-                "title": "Proyecto 1",
-                "description": "Esta es la descripcion del primer proyecto",
-                "title_english": "Project 1",
-                "content_english": "This is the description for the first project",
-                "image": "/media/images/1",
-                "images": [
-                    "/media/images/2",
-                    "/media/images/3",
-                    "/media/images/4",
-                ]
-            },
-            {
-                "id": 2,
-                "title": "Proyecto 2",
-                "description": "Esta es la descripcion del segundo proyecto",
-                "title_english": "Project 1",
-                "content_english": "This is the description for the second project",
-                "image": "/media/images/1",
-                "images": [
-                    "/media/images/2",
-                    "/media/images/3",
-                    "/media/images/4",
-                ]
-            }
-        ]
-        
 ## Authentication [/login]
 
 ### Login [POST /login/]
