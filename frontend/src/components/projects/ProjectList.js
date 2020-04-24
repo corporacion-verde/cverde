@@ -1,7 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-const ProjectList = () => {
-  return <div>ProjectList</div>;
+import {fetchProjects} from '../../actions';
+
+class ProjectList extends React.Component {
+  componentDidMount() {
+    this.props.fetchProjects();
+    console.log(this.props.projects);
+  }
+  render() {
+    return <div>ProjectList</div>;
+  }
 };
 
-export default ProjectList;
+const mapStateToProps = (state) => {
+  return {
+    projects: Object.values(state.projects)
+  }
+}
+
+export default connect(mapStateToProps, {fetchProjects})(ProjectList);
