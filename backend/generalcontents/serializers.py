@@ -11,4 +11,4 @@ class ContentSerializer(serializers.HyperlinkedModelSerializer):
 class TeamMemberSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = TeamMember
-        fields = ('name', 'lastname', 'email', 'role', 'role_english', 'avatar', 'position')
+        fields = ('id', 'name', 'lastname', 'email', 'role', 'role_english', 'avatar', 'position')

@@ -3,6 +3,7 @@ import {
   FETCH_PROJECT,
   FETCH_PROJECTS,
   FETCH_CONTENT,
+  FETCH_BOARD_MEMBERS,
 } from './types';
 
 export const fetchProjects = () => async dispatch => {
@@ -18,4 +19,9 @@ export const fetchProject = (id) => async dispatch => {
 export const fetchContent = (code) => async dispatch => {
   const response = await backend.get(`/generalcontents/contents/${code}`);
   dispatch({type: FETCH_CONTENT, payload: response.data});
+}
+
+export const fecthBoardMembers = () => async dispatch => {
+  const response = await backend.get('/generalcontents/teammembers/');
+  dispatch({type: FETCH_BOARD_MEMBERS, payload: response.data});
 }
