@@ -3,7 +3,7 @@ import {Router, Route, Switch} from 'react-router-dom';
 
 import history from '../history';
 import Home from './Home';
-import About from './About';
+import About from './about/About';
 import ProjectList from './projects/ProjectList';
 import ProjectShow from './projects/ProjectShow';
 
